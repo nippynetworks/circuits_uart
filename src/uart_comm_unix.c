@@ -437,7 +437,7 @@ int uart_open(struct uart *port, const char *name, const struct uart_config *con
     }
 
     // Clear garbage data from RX/TX queues
-    tcflush(port->fd, TCIOFLUSH);
+    tcflush(port->fd, TCIFLUSH);
 
     return 0;
 
